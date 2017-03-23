@@ -38,6 +38,7 @@ var imgUnicorn = new MallProduct('Canned Unicorn Meat', 'images/unicorn.jpg');
 var imgUsb = new MallProduct('Wriggling USB Tentacle', 'images/usb.gif');
 var imgWatercan = new MallProduct('Useless Watering Can', 'images/water-can.jpg');
 var imgWine = new MallProduct('No-Spill Wine Glass', 'images/wine-glass.jpg');
+
 if (localStorage.storedArray) {
   var parsedArray = JSON.parse(localStorage.storedArray);
   for (var i = 0; i < parsedArray.length; i++) {
