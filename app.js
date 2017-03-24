@@ -70,6 +70,20 @@ function drawImages() {
 }
 drawImages();
 
+var totalProgress = 0;
+function progressBar() {
+  var progBar = document.getElementById('prog-bar');
+  totalProgress++;
+  var percentProg = totalProgress * 4;
+  progBar.style.width = percentProg.toString() + '%';
+  if (percentProg > 50 && percentProg < 75) {
+    progBar.style.backgroundColor = 'yellow';
+  }
+  else if (percentProg >= 75) {
+    progBar.style.backgroundColor = '#00FF00';
+  }
+}
+
 function showNewImages() {
   event.preventDefault();
   var clickedImg = event.target;
@@ -77,12 +91,13 @@ function showNewImages() {
   productList[leftImage.className].timesShown++;
   productList[midImage.className].timesShown++;
   productList[rightImage.className].timesShown++;
+  progressBar();
   drawImages();
   numClicks++;
   numClickSpan.innerText = numClicks;
   if (numClicks === 25) {
-    localStorage.storedArray = JSON.stringify(productList);
     renderData();
+    localStorage.storedArray = JSON.stringify(productList);
     leftImage.removeEventListener('click', showNewImages);
     midImage.removeEventListener('click', showNewImages);
     rightImage.removeEventListener('click', showNewImages);

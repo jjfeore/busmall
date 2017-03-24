@@ -35,22 +35,65 @@ canvas {
   display: none;
 }
 
-div p {
+h5 {
   text-align: center;
   font-weight: bold;
-  margin: 0px 0px 20px 0px;
+  font-size: 1vw;
+  margin: 0px;
   padding: 0px;
 }
 
-div img {
+.img-cont {
+  display: inline-block;
   width: 30%;
   margin: 0px;
   padding: 0px;
   border: 3px solid #CCC;
   vertical-align: middle;
   height: 100%;
+  background-color: #00FF00;
 }
 
-#left-image, #mid-image {
+.img-cont img {
+  width: 100%;
+  object-fit: cover;
+  margin: 0%;
+  display: block;
+  transition: opacity 1s;
+}
+
+.img-cont img:hover {
+  opacity: 0.5;
+}
+
+.first2 {
   margin-right: 4%;
+}
+
+#prog-border {
+  width: 60%;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px auto;
+  padding: 0px;
+  border: 3px solid #CCC;
+  position: relative;
+}
+
+#prog-border p {
+  font-size: 14px;
+  z-index: 999;
+  margin: 5px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#prog-bar {
+  width: 0%;
+  background-color: #FF0000;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  height: 30px;
 }
