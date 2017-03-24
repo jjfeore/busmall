@@ -80,7 +80,7 @@ function progressBar() {
     progBar.style.backgroundColor = 'yellow';
   }
   else if (percentProg >= 75) {
-    progBar.style.backgroundColor = 'green';
+    progBar.style.backgroundColor = '#00FF00';
   }
 }
 
